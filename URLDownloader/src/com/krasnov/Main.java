@@ -7,5 +7,6 @@ public class Main {
         System.out.println(url.getProtocol());
         System.out.println(url.getName());
         System.out.println(url.getDomain());
+        System.out.println(url.getMapping());
     }
 }

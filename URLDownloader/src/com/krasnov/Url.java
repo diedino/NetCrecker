@@ -1,13 +1,14 @@
 package com.krasnov;
 
 public class Url {
-    String url, protocol, name, domain;
+    String url, protocol, name, domain, mapping;
     boolean haveParams;
     public Url(String url) {
         this.url = url;
         protocol = Parser.getProtocol(url);
         name = Parser.getName(url);
         domain = Parser.getDomain(url);
+        mapping = Parser.getMapping(url);
     }
 
     public String getUrl() {
@@ -40,6 +41,14 @@ public class Url {
 
     public void setDomain(String domain) {
         this.domain = domain;
+    }
+
+    public String getMapping() {
+        return mapping;
+    }
+
+    public void setMapping(String mapping) {
+        this.mapping = mapping;
     }
 
     public boolean isHaveParams() {
