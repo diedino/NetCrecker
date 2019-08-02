@@ -36,7 +36,7 @@ public class Parser {
             String[] parsed = url.split("://");
             parsed = parsed[1].split("\\.");
             parsed = parsed[1].split("/");
-            parsed = parsed[1].split("\\?");
+            parsed = parsed[parsed.length-1].split("\\?");
             return parsed[0];
         }
         catch (ArrayIndexOutOfBoundsException ex) {
