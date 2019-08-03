@@ -1,6 +1,6 @@
 package com.krasnov;
 
-public class Url {
+public class Url implements UrlInterface {
     String url, protocol, name, domain, mapping;
     boolean haveParams;
     public Url(String url) {
@@ -10,7 +10,6 @@ public class Url {
         domain = Parser.getDomain(url);
         mapping = Parser.getMapping(url);
     }
-
     public String getUrl() {
         return url;
     }
@@ -18,6 +17,7 @@ public class Url {
     public void setUrl(String url) {
         this.url = url;
     }
+
 
     public String getProtocol() {
         return protocol;

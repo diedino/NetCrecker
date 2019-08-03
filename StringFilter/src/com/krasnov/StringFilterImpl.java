@@ -61,12 +61,59 @@ public class StringFilterImpl implements StringFilter {
 
     @Override
     public Iterator<String> getStringsByNumberFormat(String format) {
-        return null;
+        Checker checker = new Checker() {
+            @Override
+            public boolean check(String s, String pattern) {
+                if (s == null || s.equals("") || s.length()!=pattern.length())
+                    return false;
+                for (int i = 0; i < s.length(); i++){
+                    if (pattern.charAt(i) == '#') {
+                        if (!Character.isDigit(s.charAt(i))) {
+                            return false;
+                        }
+                    } else if (pattern.charAt(i) != s.charAt(i)) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        };
+        return filter(format, checker);
     }
 
     @Override
     public Iterator<String> getStringsByPattern(String pattern) {
-        return null;
+        Checker checker = new Checker() {
+            @Override
+            public boolean check(String s, String pattern) {
+                if (s==null)
+                    return false;
+                String tmpPattern = pattern;
+                String tmpString = s;
+                int index;
+                boolean first = false;
+                while ((index = tmpPattern.indexOf("*")) != -1) {
+                    if (index == 0) {
+                        tmpPattern = tmpPattern.substring(1);
+                        first = true;
+                        continue;
+                    }
+                    int tmpIndex = tmpString
+                            .indexOf(tmpPattern.substring(0, index));
+                    if (tmpIndex == -1
+                            || (!first && tmpIndex != 0)) {
+                        return false;
+                    }
+                    tmpString = tmpString.substring(tmpIndex + index);
+                    tmpPattern = tmpPattern.substring(index);
+                    first = false;
+                }
+                return (first && new StringBuilder(tmpString).reverse().toString()
+                        .startsWith(new StringBuilder(tmpPattern).reverse().toString()))
+                        || tmpString.equals(tmpPattern);
+            }
+        };
+        return filter(pattern, checker);
     }
 
     private Iterator<String> filter(String pattern, Checker checker){

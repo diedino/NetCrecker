@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e3a49ee-2276-40eb-a5fc-4302103089c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/krasnov/UrlInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StringFilter/src/com/krasnov/StringFilterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StringFilter/src/com/krasnov/StringFilterImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/URLDownloader/com/krasnov/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/URLDownloader/com/krasnov/Parser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/krasnov/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/krasnov/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/URLDownloader/com/krasnov/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/URLDownloader/com/krasnov/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/URLDownloader/com/krasnov/Url.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/URLDownloader/com/krasnov/Url.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/krasnov/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/krasnov/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/krasnov/Url.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/krasnov/Url.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +30,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -44,7 +48,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.krasnov.Main" />
       <module name="URLDownloader" />
-      <option name="PROGRAM_PARAMETERS" value="https://google.com/params/tarams?a=1" />
+      <option name="PROGRAM_PARAMETERS" value="https://google.com/params/tarams?a=1 $USER_HOME$/Загрузки/dsfdsf " />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
@@ -75,7 +79,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
